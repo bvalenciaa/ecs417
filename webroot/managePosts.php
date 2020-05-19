@@ -1,4 +1,11 @@
 <?php
+
+  $dbhost = getenv("MYSQL_SERVICE_HOST");
+  $dbport = getenv("MYSQL_SERVICE_PORT");
+  $dbuser = getenv("DATABASE_USER");
+  $dbpwd = getenv("DATABASE_PASSWORD");
+  $dbname = getenv("DATABASE_NAME");
+  
   session_start();
 
   if(isset($_SESSION['username'])) {
@@ -15,7 +22,7 @@
   }
 
   if (isset($_GET['delete'])) {
-    $db = mysqli_connect('localhost', 'root', '', 'ecs417'); //connect to database
+    $db = mysqli_connect($dbhost, $dbuser, $dbpwd, $dbname); //connect to database
     $query = "DELETE FROM posts WHERE id=" . $_GET['delete'];
     mysqli_query ($db, $query);
   }
