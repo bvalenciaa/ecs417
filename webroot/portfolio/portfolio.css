@@ -633,4 +633,8 @@ article h4 {
   .row {
     display: inline-block;
   }
+
+  #headimage {
+    display: none;
+  }
 }
