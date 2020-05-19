@@ -80,15 +80,10 @@
   function isEmpty() {
     var x = document.getElementById("title").value;
     var y = document.getElementById("body").value;
-    if (x == "") {
+    if (x == "" || y == "") {
         alert("Please enter a subject!");
         event.preventDefault()
     }
-    if (y == "") {
-        alert("Please enter a description!");
-        event.preventDefault()
-    }
-
   }
   </script>
 

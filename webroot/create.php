@@ -4,7 +4,7 @@ $dbhost = getenv("MYSQL_SERVICE_HOST");
 $dbport = getenv("MYSQL_SERVICE_PORT");
 $dbuser = getenv("DATABASE_USER");
 $dbpwd = getenv("DATABASE_PASSWORD");
-$dbname = getenv("DATABASE_NAME"); 
+$dbname = getenv("DATABASE_NAME");
 
 $title = "";
 $body  = "";
@@ -16,6 +16,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') // content from form
 {
   $title = mysqli_real_escape_string($db, $_POST['title']);
   $body = mysqli_real_escape_string($db, $_POST['body']);
+
+  echo($title);
 
   if (empty($title)) { echo("Title is required"); }
   if (empty($body)) { echo("Body is required"); }
