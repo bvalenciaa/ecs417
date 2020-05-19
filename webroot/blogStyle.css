@@ -1,0 +1,551 @@
+/******************************************************************************
+                               BLOG STYLING
+******************************************************************************/
+
+body {
+  font-family: 'Karla', sans-serif;
+  background: #fcfcfc url('https://66.media.tumblr.com/e9eccce5b5cd2c1eb27592f6ce3bd933/tumblr_pllid0huwL1qg2f5co1_400.png');
+  overflow-y: hidden; /* Hide vertical scrollbar */
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: #fff;
+  border: 1px solid white;
+}
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border: 1px solid white;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: #f19e9c;
+  -webkit-text-stroke:1.5px white;
+}
+
+::selection {
+  color: white;
+  background: #f19e9c;
+  -webkit-text-stroke:1.5px white;
+}
+
+.pager {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+#footer{
+  background: #fafafa;
+  min-height: 50px;
+  text-align: left;
+  color: #b1b1b1;
+  padding-top: 20px;
+  font-size: 12px;
+  line-height: 20px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+#pageContainer {
+  position: relative;
+  min-height: 100vh;
+}
+
+.userStatus {
+  float: right;
+  height: 100%;
+  width: 25%;
+  position: relative;
+}
+
+.userStatus p {
+  width: 45%;
+  float: left;
+}
+
+.blogTitle {
+  width: 60%;
+  margin-left: 35%;
+  position: static;
+  height: auto;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 10px;
+  -webkit-text-stroke:3px #f19e9c;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  text-shadow:3px 3px #e7e7e7 ;
+}
+
+.content {
+  width: 60%;
+  background-color: #f3f3f3;
+  margin-top: 2%;
+  margin-left: 35%;
+  z-index: 99999999999;
+  position: fixed;
+  height: auto;
+  font-weight: bold;
+  font: 10px 'Karla', sans-serif;
+  letter-spacing: 1.5px;
+  line-height: 15px;
+  text-transform: normal;
+  color: black;
+  text-align: center;
+  border-radius:15px 15px 0px 0px;
+  box-shadow: 9px 10px 22px -21px #000000;
+}
+
+.content h2 {
+  height: auto;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+  letter-spacing: 1.5px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: white;
+  text-align: left;
+  padding-left: 3%;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f19e9c;
+  text-shadow: 1px 1px #f19e9c;
+}
+
+.sideContent {
+    min-width: 280px;
+}
+
+.sideBar {
+  margin-left: 5%;
+  margin-top: 2%;
+  width:280px;
+  height:500px;
+  position: fixed;
+  z-index:9999999;
+  padding:0px;
+  border: 2px solid #e7e7e7;
+  background-color: #f3f3f3;
+  box-shadow: 10px 10px #99cdc9;
+}
+
+.sidebarPic {
+  width: 280px;
+  height: 260px;
+  z-index: 9999;
+  margin-left: 0px;
+  margin-top: 0px;
+  background-image: url('portfolio/cw_images/me.jpeg');
+  background-size: cover;
+  position: fixed;
+}
+
+.sidebarTitle {
+  width: 250px;
+  margin-top: 285px;
+  margin-left: 15px;
+  z-index: 99999999999;
+  position: fixed;
+  height: auto;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  line-height: 15px;
+  text-transform: uppercase;
+  -webkit-text-stroke: 0.5px #f19e9c;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  text-align: center;
+}
+
+.desc {
+  width: 250px;
+  margin-top: 314px;
+  margin-left: 18px;
+  z-index: 99999999999;
+  position: fixed;
+  height: auto;
+  font-weight: bold;
+  font: 10px 'Karla', sans-serif;
+  letter-spacing: 1.5px;
+  line-height: 15px;
+  text-transform: normal;
+  color: #000000;
+  text-align: center;
+}
+
+.links {
+  width: 250px;
+  margin-top: 360px;
+  margin-left: 18px;
+  z-index: 99999999999;
+  position: fixed;
+  height: auto;
+  font-weight: bold;
+  font: 10px 'Karla', sans-serif;
+  letter-spacing: 1.5px;
+  line-height: 15px;
+  text-transform: normal;
+  color: black;
+  text-align: center;
+}
+
+.links a {
+  font: 10px 'Karla', sans-serif;
+  padding-bottom: 50px;
+  text-decoration: none;
+  width: 40px;
+  letter-spacing: 1px;
+  padding: 10px;
+  text-transform: uppercase;
+  color: #f19e9c;
+}
+
+.links a:hover {
+  color: #99cdc9;
+}
+
+/******************************************************************************
+                               POSTS
+******************************************************************************/
+
+.post {
+  border: 2px solid #99cdc9;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 2%;
+  background-color: white;
+}
+
+.post:hover {
+  border: 2px solid #f19e9c;
+}
+
+.post h3 {
+  color: #f19e9c;
+  text-decoration: underline;
+}
+
+.post a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+}
+
+.readMore {
+  background-color: pink;
+  color: white;
+  padding: 8px;;
+  border-radius: 20px;
+  text-decoration: none;
+  font: 15px 'Karla', sans-serif;
+  margin-right: 30%;
+  margin-top: 10px;
+}
+
+
+/******************************************************************************
+                               ALL POSTS
+******************************************************************************/
+.allPosts {
+  margin: 20px;
+  padding: 10px;
+  height: 500px;
+  width: 92%;
+  font-weight: bold;
+  font: 10px 'Karla', sans-serif;
+  letter-spacing: 1.5px;
+  line-height: 15px;
+  text-transform: normal;
+  color: black;
+  text-align: left;
+  border: 1px solid #f19e9c;
+  overflow-y: scroll;
+}
+.allPosts h3 {
+  text-transform: uppercase;
+}
+
+.allPosts a {
+  float: right;
+  position: relative;
+  bottom: 40px;
+  padding: 10px;
+  background-color: #f19e9c;
+  border-radius: 10px;
+  opacity:0.7;
+}
+
+.allPosts a:hover {
+  background-color: #f19e9c;
+  opacity: 1;
+}
+
+/******************************************************************************
+                                HEADER
+******************************************************************************/
+
+.newheader {
+  font: 14px Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  background-color: #99cdc9;
+  padding: 20px 10px;
+  height: 80px;
+  color: #f3f3f3;
+  box-sizing: border-box;
+  border-radius:15px 15px 0px 0px;
+}
+
+.newheader .headerstyle {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* title */
+
+.newheader .headerstyle h1 {
+  text-transform: uppercase;
+  color: white;
+  float: left;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 40px;
+  margin: 0;
+  letter-spacing: 10px;
+}
+
+/* navi */
+
+.newheader .headerstyle a {
+  color: #ffff;
+  text-decoration: none;
+}
+
+.newheader .headerstyle nav {
+  line-height: 50px;
+  float: left;
+  margin: 0 0 0 60px;
+  padding: 0;
+}
+
+.newheader .headerstyle nav a{
+  font-size: 14px;
+  display: inline-block;
+  padding: 0 5px;
+  opacity: 0.9;
+  text-decoration:none;
+  line-height: 1;
+}
+
+.newheader .headerstyle nav a:hover {
+  opacity: 1;
+}
+
+/* login/signup */
+
+.newheader .headerstyle ul {
+  font: 14px Arial, Helvetica, sans-serif;
+  list-style: none;
+  float: right;
+}
+
+.newheader .headerstyle ul li {
+  display: inline-block;
+  margin-left: 15px;
+  opacity:0.9;
+}
+
+.newheader .headerstyle ul li:hover{
+  opacity: 1;
+}
+
+/* sign up */
+
+.newheader .headerstyle ul li:last-child a {
+  font-weight: bold;
+  background-color: #3a3c3e;
+  padding: 10px 15px;
+  border-radius: 3px;
+}
+
+/******************************************************************************
+                                 CONTACT
+******************************************************************************/
+
+.contact {
+  margin: 5%;
+
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+button[type=submit] {
+  background-color: #f19e9c ;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type=submit]:hover {
+  background-color: #e89896;
+}
+
+textarea {
+  font-family: 'Karla', sans-serif;
+  height: 200px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: none;
+}
+
+
+/******************************************************************************
+                                 RESPONSIVE
+******************************************************************************/
+
+
+@media only screen and (max-width: 1200px) {
+}
+
+@media only screen and (max-width: 1000px) {
+  .newheader .headerstyle ul {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+
+  .blogTitle {
+    font-size: 30px;
+    margin-left: 5%;
+  }
+
+  .sideContent {
+    min-width: 170px;
+  }
+
+  .sideBar {
+    margin-left: 5%;
+    margin-top: 3%;
+    width:170px;
+    height: 200px;
+    z-index:9999999;
+    background-color: red;
+    padding:0px;
+    border: 2px solid #e7e7e7;
+    background-color: white;
+    box-shadow: 10px 10px #99cdc9;
+  }
+
+  .sidebarPic {
+    display: none;
+  }
+
+  .sidebarTitle {
+    width: 250px;
+    margin-top: 20px;
+    margin-left: -35px;
+    z-index: 99999999999;
+    position: fixed;
+    height: auto;
+    font-weight: bold;
+    font: 10px 'Karla', sans-serif;
+    letter-spacing: 1.5px;
+    line-height: 15px;
+    text-transform: normal;
+    color: black;
+    text-align: center;
+  }
+
+  .links {
+    width: 250px;
+    margin-top: 60px;
+    margin-left: -35px;
+    z-index: 99999999999;
+    position: fixed;
+    height: auto;
+    font-weight: bold;
+    font: 10px 'Karla', sans-serif;
+    letter-spacing: 1.5px;
+    line-height: 15px;
+    text-transform: normal;
+    color: black;
+    text-align: center;
+  }
+
+  .links a {
+    font: 10px 'Karla', sans-serif;
+    padding-bottom: 50px;
+    text-decoration: none;
+    width: 40px;
+    letter-spacing: 1px;
+    padding: 10px;
+    text-transform: uppercase;
+    color: #f19e9c;
+    z-index: 99999999999999;
+  }
+
+  .desc {
+    display: none;
+  }
+
+  .newheader {
+    padding: 25px;
+    height: 85px;
+  }
+
+  .newheader .headerstyle h1 {
+    float: none;
+    margin: -8px 0 2px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  .newheader .headerstyle nav {
+    margin: 0;
+    float: none;
+  }
+
+  .newheader .headerstyle nav li a {
+    font-size: 13px;
+  }
+
+  .newheader .headerstyle ul {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .sideBar {
+    display: none;
+  }
+
+  .content {
+    margin-left: 0px;
+    width: 100%;
+  }
+
+  .blogTitle {
+    font-size: 20px;
+    margin-left: 0;
+  }
+}

@@ -1,27 +1,29 @@
 <?php
-  session_start();
 
-  if (isset($_GET['logout'])) {
-  	session_destroy();
-  	unset($_SESSION['username']);
-  	header("location: loginUser.php");
-  }
+if (isset($_POST['submit'])) {
+  $name = $_POST['name'];
+  $subject = $_POST['subject'];
+  $mailFrom = $_POST['mail'];
+  $message = $_POST['message'];
 
+  $mailTo = "b.valencia@se19.qmul.ac.uk";
+  $headers = "From: " .$mailFrom;
+  $txt = "You have received an e-mail from " .$name . ".\n\n" . $message;
+
+  mail($mailTo, $subject, $txt, $headers);
+  header("Location: index.php?mailSend");
+}
 
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Home | Blanca Valencia</title>
-	<link rel="stylesheet" type="text/css" href="blogStyle.css">
-  <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-  <link href="http://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic" rel="stylesheet" type="text/css">
-
-  <?php require_once('server/connection.php') ?>
-  <?php require_once('getPosts.php') ?>
-  <?php $posts = getPublished(); ?>
+  <title>Contact Me!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="blogStyle.css">
 </head>
+
 <body>
   <div id="pageContainer">
     <header>
@@ -43,16 +45,14 @@
     </div>
 
     <div class="content">
-      <h2>Recent Posts</h2>
-      <div class="allPosts">
-        <?php foreach ($posts as $post): ?>
-          <div class="post">
-            <h3><?php echo $post['title'] ?></h3>
-            <span><?php echo date("F j, Y "); ?></span><br>
-            <a href="singlePost.php?idTitlePost=<?php echo $post['id'] ?>">read post</a>
-        	</div>
-        <?php endforeach ?>
-      </div>
+      <h2>CONTACT</h2>
+      <form class="contact" action="contact.php" method="post">
+        <input type="text" name="name" placeholder="Full Name">
+        <input type="text" name="mail" placeholder="Your Email">
+        <input type="text" name="subject" placeholder="Subject">
+        <textarea name="message" placeholder="Message"></textarea>
+        <button type="submit" name="submit">SEND</button>
+      </form>
     </div>
 
     <div id="footer">

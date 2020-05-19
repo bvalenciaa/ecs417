@@ -1,0 +1,86 @@
+body {
+  font-family: 'Karla', sans-serif;
+  background: #fcfcfc url('https://66.media.tumblr.com/e9eccce5b5cd2c1eb27592f6ce3bd933/tumblr_pllid0huwL1qg2f5co1_400.png');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h4 {
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #666666;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 25px;
+  text-shadow: 2px 2px 2px #666666;
+  margin-top: 10%;
+}
+
+.box {
+  border-radius: 5px;
+  width:570px;
+  margin: 0 auto;
+  padding-top:20px;
+  font-size:30px;
+  font-family: 'Monaco', 'Courier New';
+  text-align: left;
+  font-size:13px;
+  color: white;
+}
+
+input[type=text], input[type=password], input[type=email] {
+  width: 200px;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text], input[type=password], input[type=email]{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+fieldset {
+  color: black;
+  padding: 40px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+button[type=submit] {
+  background-color: #f19e9c;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type=submit]:hover {
+  background-color: #e89896;
+}
+
+#footer{
+  background: #fafafa;
+  min-height: 50px;
+  text-align: left;
+  color: #b1b1b1;
+  padding-top: 20px;
+  font-size: 12px;
+  line-height: 20px;
+  margin-top: 5%;
+}
+
+.pager {
+  max-width: 1024px;
+  margin: 0 auto;
+}

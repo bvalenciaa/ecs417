@@ -1,0 +1,479 @@
+@font-face {
+  font-family: "creo";
+  src: url('https://dl.dropboxusercontent.com/s/uk7fcayvza8gd9t/Creo-ExtraBold.ttf');
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: #fff;
+  border: 1px solid white;
+}
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border: 1px solid white;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: #f19e9c;
+  -webkit-text-stroke:1.5px white;
+}
+
+::selection {
+  color: white;
+  background: #f19e9c;
+  -webkit-text-stroke:1.5px white;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  background: #fcfcfc url('https://66.media.tumblr.com/e9eccce5b5cd2c1eb27592f6ce3bd933/tumblr_pllid0huwL1qg2f5co1_400.png');
+  overflow-y: hidden; /* Hide vertical scrollbar */
+}
+
+a {
+  color: pink;
+  text-decoration: none;
+}
+
+h2 {
+  -webkit-text-stroke: 1px #f19e9c;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+#pageContainer {
+  position: relative;
+  min-height: 100vh;
+}
+
+#wrapper {
+  padding: 20px 40px;
+  height: 80px;
+  max-width: 1200px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.newnavi {
+  margin-bottom: 0;
+}
+
+.managerContainer {
+  float: right;
+  border: 2px solid #f19e9c;
+  background-color: white;
+  width: 70%;
+  height: 500px;
+  box-shadow: 9px 10px 22px -21px #000000;
+  position: relative;
+}
+
+.managerContent {
+  width: 90%;
+  height: 70%;
+  overflow-y:scroll;
+  display: inline-block;
+}
+
+.menuShorcuts {
+  float: left
+  z-index:9999999;
+  width: 25%;
+  border: 2px solid #f19e9c;
+  background-color: white;
+  box-shadow: 9px 10px 22px -21px #000000;
+}
+
+.menuLinks {
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  line-height: 15px;
+  text-transform: normal;
+  color: black;
+  text-align: center;
+}
+
+.menuLinks a {
+  width: 40px;
+  letter-spacing: 1px;
+  padding: 10px;
+  text-transform: uppercase;
+  color: #99cdc9;
+}
+
+.menuLinks a:hover {
+  color: #f19e9c;
+}
+
+h2 {
+  text-transform: uppercase;
+  margin-left: 5%;
+  border-bottom: 1px solid #99cdc9;
+  width: 90%;
+}
+
+/******************************************************************************
+                                HEADER
+******************************************************************************/
+
+.newheader {
+  font: 14px Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  background-color: #99cdc9;
+  padding: 20px 10px;
+  height: 80px;
+  color: #f3f3f3;
+  box-sizing: border-box;
+  border-radius:15px 15px 0px 0px;
+}
+
+.newheader .headerstyle {
+  max-width: 1200px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* title */
+
+.newheader .headerstyle h1 {
+  text-transform: uppercase;
+  float: left;
+  font-family: "creo";
+  line-height: 40px;
+  margin: 0;
+  letter-spacing: 10px;
+  -webkit-text-stroke:1.5px #f19e9c;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  text-shadow:3px 3px #f3f3f3;
+}
+
+/* navi */
+
+.newheader .headerstyle a {
+  color: #ffff;
+  text-decoration: none;
+}
+
+.newheader .headerstyle nav {
+  line-height: 50px;
+  float: left;
+  margin: 0 0 0 60px;
+  padding: 0;
+}
+
+.newheader .headerstyle nav a{
+  font-size: 14px;
+  display: inline-block;
+  padding: 0 5px;
+  opacity: 0.9;
+  text-decoration:none;
+  line-height: 1;
+}
+
+.newheader .headerstyle nav a:hover {
+  opacity: 1;
+}
+
+.newheader .headerstyle nav a.selected {
+  color: #f19e9c;
+}
+
+/* login/signup */
+
+.newheader .headerstyle ul {
+  font: 14px Arial, Helvetica, sans-serif;
+  list-style: none;
+  float: right;
+}
+
+.newheader .headerstyle ul li {
+  display: inline-block;
+  margin-left: 15px;
+  opacity:0.9;
+}
+
+.newheader .headerstyle ul li:hover{
+  opacity: 1;
+}
+
+/* sign up */
+
+.newheader .headerstyle ul li:last-child a {
+  font-weight: bold;
+  background-color: #3a3c3e;
+  padding: 10px 15px;
+  border-radius: 3px;
+}
+
+/******************************************************************************
+                               POSTS
+******************************************************************************/
+
+.post {
+  border: 2px solid #99cdc9;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 2%;
+  width: 90%;
+}
+
+.post:hover {
+  border: 2px solid #f19e9c;
+}
+
+.post h3 {
+  color: #f19e9c;
+  text-decoration: underline;
+}
+
+.post a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+}
+
+.readMore {
+  background-color: pink;
+  color: white;
+  padding: 8px;;
+  border-radius: 20px;
+  text-decoration: none;
+  font: 15px 'Karla', sans-serif;
+  margin-right: 30%;
+  margin-top: 10px;
+}
+
+/******************************************************************************
+                               CREATE
+******************************************************************************/
+.goBack {
+  background-color: #99cdc9;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: left;
+  position: absolute;
+  top: 2%;
+  left: 2%;
+}
+
+.input-group {
+  width: 100%;
+}
+
+.box {
+  background-color: #f3f3f3;
+  margin: 20px;
+  box-sizing: border-box;
+  border-radius:15px 15px 0px 0px;
+  padding: 20px;
+}
+
+textarea {
+  width: 90%;
+  height: 200px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: none;
+}
+
+input[type=text] {
+  width: 90%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+label {
+  float: left;
+  margin-left: 5%;
+  text-transform: uppercase;
+}
+
+button[type=submit], button[type=reset] {
+  background-color: #f19e9c ;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type=submit]:hover, button[type=reset]:hover {
+  background-color: #e89896;
+}
+
+/******************************************************************************
+                                 RESPONSIVE
+******************************************************************************/
+
+
+@media only screen and (max-width: 1200px) {
+  .content {
+    width: 50%;
+    background-color: white;
+    margin-top: 3%;
+    margin-left: 40%;
+    z-index: 99999999999;
+    position: fixed;
+    height: auto;
+    font-weight: bold;
+    font: 10px 'Karla', sans-serif;
+    letter-spacing: 1.5px;
+    line-height: 15px;
+    text-transform: normal;
+    color: black;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .newheader .headerstyle ul {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .content {
+    width: 60%;
+    background-color: white;
+    margin-top: 3%;
+    margin-left: 32%;
+    z-index: 99999999999;
+    position: fixed;
+    height: auto;
+    font-weight: bold;
+    font: 10px 'Karla', sans-serif;
+    letter-spacing: 1.5px;
+    line-height: 15px;
+    text-transform: normal;
+    color: black;
+    text-align: center;
+  }
+
+  .sideContent {
+    min-width: 170px;
+  }
+
+  .sideBar {
+    margin-left: 5%;
+    margin-top: 3%;
+    width:170px;
+    height: 200px;
+    z-index:9999999;
+    background-color: red;
+    padding:0px;
+    border: 2px solid black;
+    background-color:#ffffff;
+    box-shadow: 10px 10px pink;
+  }
+
+  .sidebarPic {
+    display: none;
+  }
+
+  .sidebarTitle {
+    width: 250px;
+    margin-top: 20px;
+    margin-left: -35px;
+    z-index: 99999999999;
+    position: fixed;
+    height: auto;
+    font-weight: bold;
+    font: 10px 'Karla', sans-serif;
+    letter-spacing: 1.5px;
+    line-height: 15px;
+    text-transform: normal;
+    color: black;
+    text-align: center;
+  }
+
+  .links {
+    width: 250px;
+    margin-top: 60px;
+    margin-left: -35px;
+    z-index: 99999999999;
+    position: fixed;
+    height: auto;
+    font-weight: bold;
+    font: 10px 'Karla', sans-serif;
+    letter-spacing: 1.5px;
+    line-height: 15px;
+    text-transform: normal;
+    color: black;
+    text-align: center;
+  }
+
+  .links a {
+    font: 10px 'Karla', sans-serif;
+    padding-bottom: 50px;
+    text-decoration: none;
+    width: 40px;
+    letter-spacing: 1px;
+    padding: 10px;
+    text-transform: uppercase;
+    color: pink;
+    z-index: 99999999999999;
+  }
+
+  .desc {
+    display: none;
+  }
+
+  .newheader {
+    padding: 25px;
+    height: 85px;
+  }
+
+  .newheader .headerstyle h1 {
+    float: none;
+    margin: -8px 0 2px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 1;
+  }
+
+  .newheader .headerstyle nav {
+    margin: 0;
+    float: none;
+  }
+
+  .newheader .headerstyle nav li a {
+    font-size: 13px;
+  }
+
+  .newheader .headerstyle ul {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .sideBar {
+    display: none;
+  }
+
+  .content {
+    margin-left: 0px;
+    width: 100%;
+  }
+
+  .goBack {
+    display: none;
+  }
+
+  h2 {
+    font-size: 15px;
+  }
+}
