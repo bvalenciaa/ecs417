@@ -31,11 +31,4 @@ function getLatest()
 	return $latest;
 }
 
-if (isset($_GET['idTitlePost'])) {
-	$db = mysqli_connect('localhost', 'root', '', 'ecs417'); //connect to database
-	$query = "SELECT * FROM posts WHERE id=" . $_GET['idTitlePost'];
-	$result = mysqli_query($db, $query);
-	$post = mysqli_fetch_assoc($result);
-}
-
 ?>

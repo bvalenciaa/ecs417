@@ -5,7 +5,7 @@
   $dbuser = getenv("DATABASE_USER");
   $dbpwd = getenv("DATABASE_PASSWORD");
   $dbname = getenv("DATABASE_NAME");
-  
+
   session_start();
 
   $title = '';
@@ -25,7 +25,7 @@
   }
 
   if (isset($_GET['idTitlePost'])) {
-    $db = mysqli_connect('localhost', 'root', '', 'ecs417'); //connect to database
+    $db = mysqli_connect($dbhost, $dbuser, $dbpwd, $dbname); //connect to database
     $query = "SELECT * FROM posts WHERE id=" . $_GET['idTitlePost'];
     $result = mysqli_query($db, $query);
     $post = mysqli_fetch_assoc($result);
