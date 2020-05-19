@@ -1,10 +1,16 @@
 <?php
 
+$dbhost = getenv("MYSQL_SERVICE_HOST");
+$dbport = getenv("MYSQL_SERVICE_PORT");
+$dbuser = getenv("DATABASE_USER");
+$dbpwd = getenv("DATABASE_PASSWORD");
+$dbname = getenv("DATABASE_NAME"); 
+
 $title = "";
 $body  = "";
 $publish = 1;
 
-$db = mysqli_connect('localhost', 'root', '', 'ecs417'); //connect to database
+$db = mysqli_connect($dbhost, $dbuser, $dbpwd, $dbname); //connect to database
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') // content from form
 {
