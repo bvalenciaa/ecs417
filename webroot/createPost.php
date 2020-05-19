@@ -42,7 +42,7 @@
 
           <div class="input-group">
             <label>Title</label><br>
-            <input type="text" id="title" class="text-input">
+            <input type="text" name="title" id="title" class="text-input">
           </div>
 
           <div class="input-group">
